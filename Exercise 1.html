@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1><center><strong>Form Data Diri</strong></center></h1>
+        <title>Data Diri</title>
+        <body>
+        <fieldset>
+                <legend> Personal Data </legend>
+                     
+                <p>
+                    <label for="nama">Nama:</label>
+                    <input type="text" id="nama" placeholder="name">
+            
+                    <p>
+                        <label for="ttl">Tempat Tanggal Lahir:</label>
+                        <input type="text" id="ttl" placeholder="tempat lahir">
+                        <label for="pemisah"> / </label>
+                        <input type="date" id="pemisah" placeholder="dd/mm/yy">
+
+
+                        <p>
+                            <label for="gender">Gender:</label>
+                            <input type="radio" name="gender" id="pria" value="Pria">Pria
+                            <input type="radio" name="gender" id="wanita" value="Wanita">Wanita
+                        <p>
+                                <label for="phone">Phone Number:</label>
+                                <input type="number" id="phone" placeholder="phone number">
+        
+                        <p>
+                            <label for="email">E-mail:</label>
+                            <input type="text" id="email" placeholder="e-mail">
+            </fieldset>
+
+            <fieldset>
+                    <legend> Riwayat Pendidikan </legend>
+                    <table>
+                            <tr>
+                                <th></th>
+                                <th> Nama Institusi </th>
+                                <th> Tahun Lulus </th>
+                            </tr>
+                            <tr>
+                                <td> SD:</td>
+                                <td><input type="text" id='SD'></td>
+                                <td><input type="text" id='SD1'></td>
+                           
+                            </tr>
+                            <tr>
+                                    <td>SMP:</td>
+                                    <td><input type="text"  id="SMP"></td>
+                                    <td><input type="number" id="SMP1"></td>
+                            </tr>
+                            <tr>
+                            <td>SMA:</td>
+                                <td><input type="text"  id="SMA"></td>
+                                <td><input type="number" id="SMA1"></td>
+                            </tr>
+                            <tr>
+                                    <td>S1:</td>
+                                    <td><input type="text" id="S1"></td>
+                                    <td><input type="number"  id="S1a"></td>
+                            </tr>
+                                        </table>
+            </fieldset>
+            
+            <fieldset>
+                <legend> Riwayat Pekerjaan </legend>
+                <table>
+                    <tr>
+                        
+                            <th> Nama Perusahaan </th>
+                            <th> Lama Bekerja</th>
+                            <th> Posisi </th>
+                    </tr>
+                    <tr> 
+                            <td><input type="text" id="perusahaan"></td>
+                            <td><input type="text" id="lama"></td>
+                            <td><input type="text" id="posisi"></td>
+                        </tr>
+                        <tr>
+                                <td><input type="text1" id="company"></td>
+                                <td><input type="text1" id="bekerja"></td>
+                                <td><input type="text1" id="jabatan"></td>
+                                </tr>
+                            
+                                           </table>
+                                        </body>
+            </fieldset>
+            
+            <button onclick="data()">Submit!</button>
+            <p id="tes"></p>
+
+            <script>
+                function data() {
+                    let nama= document.getElementById("nama").value;
+                    let TTL= document.getElementById("ttl").value;
+                    let pemisah= document.getElementById("pemisah").value;
+                    if (document.getElementById('pria').checked) {
+            gender = document.getElementById('pria').value;
+        }
+        else if (document.getElementById('wanita').checked) {
+            gender = document.getElementById('wanita').value;
+        }
+                    let phone= document.getElementById("phone").value;
+                    let email= document.getElementById("email").value;
+                    let SD= document.getElementById("SD").value;
+                    let SD1= document.getElementById("SD1").value;
+                    let SMP= document.getElementById("SMP").value;
+                    let SMP1= document.getElementById("SMP1").value;
+                    let SMA= document.getElementById("SMA").value;
+                    let SMA1= document.getElementById("SMA1").value;
+                    let S1= document.getElementById("S1").value;
+                    let S1a= document.getElementById("S1a").value;
+                    let perusahaan = document.getElementById("perusahaan").value;
+                    let lama = document.getElementById("lama").value;
+                    let posisi = document.getElementById("posisi").value;
+                    let company = document.getElementById("company").value;
+                    let bekerja = document.getElementById("bekerja").value;
+                    let jabatan = document.getElementById("jabatan").value;
+
+                    
+                    document.getElementById("tes").innerHTML= 'Nama: ' + nama + '<br>' + ' Tempat Tanggal Lahir: ' + TTL + ' , ' + pemisah + '<br>' + ' Gender: ' + gender + '<br>' +
+                    ' Phone Number: ' + phone + '<br>' + ' E-mail: ' + email + '<br>' + ' SD: ' + SD + '<br>' + ' SMP: ' + SMP + '<br>' + ' SMA: ' + SMA +
+                    '<br>' + ' S1: ' + S1 + '<br>' + ' Nama Perusahaan: ' + perusahaan + ',' + lama + ',' + posisi + '<br>' + company + ',' + bekerja + ',' + jabatan;  
+
+                }
+            
+            </script>
+
+    </head>
+</html>
